@@ -2,11 +2,10 @@ const nameInputEl = document.querySelector("#name-input");
 const textOutputEl = document.querySelector("#name-output");
 
 function checkTextArea(event) {
-    event.preventDefault();
-    if (nameInputEl.value = "") {
-        textOutputEl.textContent = "Anonymous"
+    if (nameInputEl.textContent = "") {
+        textOutputEl.textContent = "Anonimous";
     } else {
-        textOutputEl.textContent = nameInputEl.value
+        textOutputEl.textContent = event.currentTarget.value;
     }
 }
 nameInputEl.addEventListener("input", checkTextArea);
