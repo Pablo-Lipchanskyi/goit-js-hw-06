@@ -8,6 +8,6 @@ incremButton.addEventListener('click', () => {
     counterValue.textContent = counterValue.value;
 });
 decremButton.addEventListener('click', () => {
-    counterValue.value += Number(decremButton.textContent);
-    counterValue.textContent = String(counterValue.value);
+    counterValue.value -= 1;
+    counterValue.textContent = counterValue.value;
 });

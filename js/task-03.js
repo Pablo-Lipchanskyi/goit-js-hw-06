@@ -13,10 +13,10 @@ const images = [
   },
 ];
 const galleryEl = document.querySelector('.gallery');
-
-images.forEach(image => {
-  let urlEl = image.url;
-  let altEl = image.alt;
-  galleryEl.insertAdjacentHTML('beforeend', `<li><img src =${urlEl} alt =${altEl}</li>`);
-})
+const createNewitem = images => {
+  return images.map((image) =>
+    `<li class="gallery__item">
+  <img class="gallery__image" src="${image.url}" alt="${image.alt}" width = 400px></li>`).join("");
+};
+galleryEl.insertAdjacentHTML('afterbegin', createNewitem(images));
 galleryEl.style.display = "flex";
