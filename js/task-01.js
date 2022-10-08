@@ -1,10 +1,7 @@
  const list = document.querySelector("#categories");
  const items = list.querySelectorAll(".item");
- console.log(`В списке ${items.length} категории:`);
- items.forEach((node) => {
-   const h2 = node.querySelector("h2");
-   const nodeItems = node.querySelectorAll("li");
-  console.log(
-     ` - категория: ${h2.textContent} (количество элементов: ${nodeItems.length})`
-   );
- });
+items.forEach(item => {
+  console.log(`Category: ${item.firstElementChild.textContent}`);
+  console.log(`Elements: ${item.lastElementChild.children.length}`);
+  console.log(' ');
+});
